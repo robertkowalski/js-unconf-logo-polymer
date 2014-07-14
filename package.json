@@ -1,0 +1,22 @@
+{
+  "name": "js-unconf-logo-polymer",
+  "version": "0.0.0",
+  "description": "# js-unconf-logo-polymer",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "less": "~1.7.3"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robertkowalski/js-unconf-logo-polymer.git"
+  },
+  "homepage": "https://github.com/robertkowalski/js-unconf-logo-polymer",
+  "keywords": [],
+  "author": "Robert Kowalski <rok@kowalski.gd>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertkowalski/js-unconf-logo-polymer/issues"
+  }
+}

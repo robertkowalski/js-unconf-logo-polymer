@@ -2,13 +2,33 @@
 
 <polymer-element name="js-unconf-logo">
   <template>
-    <div>Hello World</div>
+    <link rel="stylesheet" href="js-unconf-logo.css">
+
+    <section class="container">
+      <div on-mouseover="{{ onMouseenter }}" on-mouseout="{{ onMouseout }}">
+          <div id="logo" class="{{ {'show-back-x': over === true} | tokenList }}">
+            <figure class="front"></figure>
+            <figure class="back"></figure>
+            <figure class="right"></figure>
+            <figure class="left"></figure>
+            <figure class="top"></figure>
+            <figure class="bottom"></figure>
+          </div>
+      </div>
+    </section>
   </template>
   <script>
     Polymer('js-unconf-logo', {
       ready: function () {
-
+        this.over = false;
+      },
+      onMouseout: function () {
+        this.over = false;
+      },
+      onMouseenter: function () {
+        this.over = true;
       }
+
     });
   </script>
 </polymer-element>

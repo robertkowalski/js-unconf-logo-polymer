@@ -1,0 +1,99 @@
+@import "bower_components/elements/elements.less";
+
+.prefix(@to-prefix, @value) {
+  -webkit-@{to-prefix}: @value;
+     -moz-@{to-prefix}: @value;
+       -o-@{to-prefix}: @value;
+          @{to-prefix}: @value;
+}
+
+.container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 0 0 40px;
+  .prefix(perspective, 1200px);
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  .prefix(transform-style, preserve-3d);
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition: -moz-transform 1s;
+       -o-transition: -o-transform 1s;
+          transition: transform 1s;
+  figure {
+    display: block;
+    position: absolute;
+    text-align: center;
+    line-height: 196px;
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #ffffff;
+    margin: 0 !important;
+  }
+  .top,
+  .bottom {
+    top: 0px;
+    line-height: 96px;
+  }
+  .front,
+  .back,
+  .top,
+  .bottom,
+  .right,
+  .left   {
+    width: 150px;
+    height: 150px;
+    background: url('logo-150.png');
+  }
+}
+
+
+#logo .front {
+  .prefix(transform, translateZ(75px));
+}
+#logo .back {
+  .prefix(transform, rotateX(180deg) translateZ(75px));
+}
+#logo .top {
+  .prefix(transform, rotateX(90deg) translateZ(75px));
+}
+#logo .bottom {
+  .prefix(transform, rotateX(-90deg) translateZ(75px));
+}
+#logo .right {
+  .prefix(transform, rotateY(90deg) translateZ(75px));
+}
+#logo .left {
+  .prefix(transform, rotateY(-90deg) translateZ(75px));
+}
+
+#logo.show-front {
+  .prefix(transform, translateZ(-75px));
+}
+#logo.show-back-x {
+  .prefix(transform, translateZ(-75px) rotateX(-180deg));
+}
+#logo.show-top {
+  .prefix(transform, translateZ(-75px) rotateX(-90deg));
+}
+#logo.show-bottom {
+  .prefix(transform, translateZ(-75px) rotateX(90deg));
+}
+
+#logo.show-back-y {
+  .prefix(transform, translateZ(-75px) rotateY(-180deg));
+  .back {
+    .prefix(transform, rotateY(180deg) translateZ(75px));
+  }
+}
+#logo.show-left {
+  .prefix(transform, translateZ(-75px) rotateY(90deg));
+}
+#logo.show-right {
+  .prefix(transform, translateZ(-75px) rotateY(-90deg));
+}
