@@ -6,7 +6,7 @@
 
     <section class="container">
       <div on-mouseover="{{ onMouseenter }}" on-mouseout="{{ onMouseout }}">
-          <div id="logo" class="{{ {'show-back-x': over === true} | tokenList }}">
+          <div id="logo" class="{{ over | enableAnimationClass }}">
             <figure class="front"></figure>
             <figure class="back"></figure>
             <figure class="right"></figure>
@@ -19,8 +19,20 @@
   </template>
   <script>
     Polymer('js-unconf-logo', {
+      publish: {
+        animation: ''
+      },
+      enableAnimationClass: function (mouseIsOver) {
+        if (!mouseIsOver) {
+          return '';
+        }
+        return this.animation;
+      },
       ready: function () {
         this.over = false;
+        if (this.animation === 'show-back-x') {
+          this.$.logo.setAttribute('horizontal-helper', true);
+        }
       },
       onMouseout: function () {
         this.over = false;
@@ -28,7 +40,6 @@
       onMouseenter: function () {
         this.over = true;
       }
-
     });
   </script>
 </polymer-element>

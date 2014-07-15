@@ -75,7 +75,7 @@
 #logo.show-front {
   .prefix(transform, translateZ(-75px));
 }
-#logo.show-back-x {
+#logo.show-back-y {
   .prefix(transform, translateZ(-75px) rotateX(-180deg));
 }
 #logo.show-top {
@@ -84,16 +84,18 @@
 #logo.show-bottom {
   .prefix(transform, translateZ(-75px) rotateX(90deg));
 }
-
-#logo.show-back-y {
+#logo.show-back-x {
   .prefix(transform, translateZ(-75px) rotateY(-180deg));
-  .back {
-    .prefix(transform, rotateY(180deg) translateZ(75px));
-  }
 }
 #logo.show-left {
   .prefix(transform, translateZ(-75px) rotateY(90deg));
 }
 #logo.show-right {
   .prefix(transform, translateZ(-75px) rotateY(-90deg));
+}
+
+#logo[horizontal-helper] {
+  .back {
+    .prefix(transform, rotateY(180deg) translateZ(75px));
+  }
 }
