@@ -101,6 +101,12 @@
   -o-transform: translateZ(-75px) rotateX(-180deg);
   transform: translateZ(-75px) rotateX(-180deg);
 }
+#logo.show-back-y-backward {
+  -webkit-transform: translateZ(-75px) rotateX(180deg);
+  -moz-transform: translateZ(-75px) rotateX(180deg);
+  -o-transform: translateZ(-75px) rotateX(180deg);
+  transform: translateZ(-75px) rotateX(180deg);
+}
 #logo.show-top {
   -webkit-transform: translateZ(-75px) rotateX(-90deg);
   -moz-transform: translateZ(-75px) rotateX(-90deg);
@@ -118,6 +124,12 @@
   -moz-transform: translateZ(-75px) rotateY(-180deg);
   -o-transform: translateZ(-75px) rotateY(-180deg);
   transform: translateZ(-75px) rotateY(-180deg);
+}
+#logo.show-back-x-right {
+  -webkit-transform: translateZ(-75px) rotateY(180deg);
+  -moz-transform: translateZ(-75px) rotateY(180deg);
+  -o-transform: translateZ(-75px) rotateY(180deg);
+  transform: translateZ(-75px) rotateY(180deg);
 }
 #logo.show-left {
   -webkit-transform: translateZ(-75px) rotateY(90deg);

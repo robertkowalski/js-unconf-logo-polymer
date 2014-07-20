@@ -15,9 +15,11 @@ animation             string
 
   show-front
   show-back-y
+  show-back-y-backward
   show-top
   show-bottom
   show-back-x
+  show-back-x-right
   show-left
   show-right
 ```
